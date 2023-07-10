@@ -66,7 +66,6 @@ const userRegister = async (req, res, next) => {
       const error = new Error("This username already exists");
       error.code = 400;
       next(error);
-      return;
     }
   } catch (error) {
     error.code = 500;
